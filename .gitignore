@@ -63,6 +63,9 @@ Carthage/Build
 # For more information about the recommended setup visit:
 # https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
 
+#Firebase
+GoogleService-Info.plist
+
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots

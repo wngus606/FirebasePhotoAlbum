@@ -12,9 +12,13 @@
 		AA8F9B841E92975D00ABFC88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8F9B821E92975D00ABFC88 /* Main.storyboard */; };
 		AA8F9B861E92975D00ABFC88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8F9B851E92975D00ABFC88 /* Assets.xcassets */; };
 		AA8F9B891E92975D00ABFC88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8F9B871E92975D00ABFC88 /* LaunchScreen.storyboard */; };
+		B3A4AD4040D1B8AE35EC5097 /* Pods_FirebasePhotoAlbum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D4110DFA5BD12801497AC4 /* Pods_FirebasePhotoAlbum.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15D4110DFA5BD12801497AC4 /* Pods_FirebasePhotoAlbum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebasePhotoAlbum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3146033918D79EE629368F3 /* Pods-FirebasePhotoAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebasePhotoAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebasePhotoAlbum/Pods-FirebasePhotoAlbum.release.xcconfig"; sourceTree = "<group>"; };
+		A3A217C901081457A80CCC76 /* Pods-FirebasePhotoAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebasePhotoAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebasePhotoAlbum/Pods-FirebasePhotoAlbum.debug.xcconfig"; sourceTree = "<group>"; };
 		AA8F9B7B1E92975D00ABFC88 /* FirebasePhotoAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebasePhotoAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8F9B7E1E92975D00ABFC88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA8F9B801E92975D00ABFC88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3A4AD4040D1B8AE35EC5097 /* Pods_FirebasePhotoAlbum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6149AA0F16CF05BAB884EEF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15D4110DFA5BD12801497AC4 /* Pods_FirebasePhotoAlbum.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A190B9CE565DF0F8EBABCAF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3A217C901081457A80CCC76 /* Pods-FirebasePhotoAlbum.debug.xcconfig */,
+				A3146033918D79EE629368F3 /* Pods-FirebasePhotoAlbum.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AA8F9B721E92975D00ABFC88 = {
 			isa = PBXGroup;
 			children = (
 				AA8F9B7D1E92975D00ABFC88 /* FirebasePhotoAlbum */,
 				AA8F9B7C1E92975D00ABFC88 /* Products */,
+				A190B9CE565DF0F8EBABCAF5 /* Pods */,
+				6149AA0F16CF05BAB884EEF6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA8F9B8D1E92975D00ABFC88 /* Build configuration list for PBXNativeTarget "FirebasePhotoAlbum" */;
 			buildPhases = (
+				3E7F578D75CB5F3575B707DF /* [CP] Check Pods Manifest.lock */,
 				AA8F9B771E92975D00ABFC88 /* Sources */,
 				AA8F9B781E92975D00ABFC88 /* Frameworks */,
 				AA8F9B791E92975D00ABFC88 /* Resources */,
+				D690370E4BA3D0D817D90073 /* [CP] Embed Pods Frameworks */,
+				88E9C7B2CB7C6B0D82CDF0AB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E7F578D75CB5F3575B707DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		88E9C7B2CB7C6B0D82CDF0AB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirebasePhotoAlbum/Pods-FirebasePhotoAlbum-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D690370E4BA3D0D817D90073 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirebasePhotoAlbum/Pods-FirebasePhotoAlbum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AA8F9B771E92975D00ABFC88 /* Sources */ = {
@@ -258,6 +333,7 @@
 		};
 		AA8F9B8E1E92975D00ABFC88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3A217C901081457A80CCC76 /* Pods-FirebasePhotoAlbum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FirebasePhotoAlbum/Info.plist;
@@ -270,6 +346,7 @@
 		};
 		AA8F9B8F1E92975D00ABFC88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3146033918D79EE629368F3 /* Pods-FirebasePhotoAlbum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FirebasePhotoAlbum/Info.plist;
